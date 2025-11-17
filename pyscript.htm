@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PyScript Hello World</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.2.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.2.1/core.js"></script>
+    </head>
+
+    <body>
+
+    <py-script worker>
+        board = [ ["", "", ""],["", "", ""],["", "", ""]]
+current_turn = "O"
+while True:
+    print(current_turn + "'s turn")
+    print(board)
+    y=input('Which row do you pick?')
+    x=input('Which column do you pick?')
+    board[y][x] = current_turn
+    if current_turn == "O": current_turn = "X"
+    elif current_turn == "X": current_turn = "O"
+    else:break;
+    </py-script>
+    </body>
+</html>
